@@ -1,24 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Qcard from '../src/Component/Qcard';
+// import { Fetch } from '../src/Component/Api';
 
-function App() {
+// type Props = {
+  
+//   totalQuestion: Number;
+//   questionNum: Number;
+//   question: String;
+//   answer: String[];
+//   userAnswer: String;
+//   callBack: any;
+  
+// };
+
+
+const App  = () => {
+  
+  // const [quizData, setQuizData] = useState([]);
+  
+  // // const qData = Fetch();
+  
+  
+  // async function api  (){
+    
+  //   const fetchApi = await Fetch();
+    
+  //   setQuizData(fetchApi);
+
+  // }
+
+  // api();
+  // console.log(quizData);
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="header">Quiz App</h1>
+      <div>
+      <button type="button" className="btn btn-warning start-btn">Start Quiz</button>
+      </div>
+
+     <Qcard  />
+
+     <button type="button" className="btn btn-warning start-btn">Next Question</button>
     </div>
   );
 }
