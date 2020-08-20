@@ -3,8 +3,18 @@
 }
 .start-btn{
   margin-top: 50px;
+  box-shadow: gray 0px 0px 2px 2px;
 }
 .header{
   color: steelblue;
-  margin-top: 50px
+  border-radius: 10px;
+  box-shadow: gray 0px 3px 0px 1px;
+  width: max-content;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  text-shadow: 5px 5px 5px lightslategray;
+  letter-spacing: 3px;
+  
 }
