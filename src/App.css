@@ -1,19 +1,26 @@
+.back{
+  background-color: #0e383b;
+  height: 110vh ;
+  
+}
 .App {
   text-align: center;
+  color: #24b1c7;
+  padding-top: 30px;
 }
 .start-btn{
   margin-top: 50px;
   box-shadow: gray 0px 0px 2px 2px;
 }
 .header{
-  color: steelblue;
+  color: #24b1c7;
   border-radius: 10px;
   box-shadow: gray 0px 3px 0px 1px;
   width: max-content;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   text-shadow: 5px 5px 5px lightslategray;
   letter-spacing: 3px;
   
@@ -21,4 +28,17 @@
 .loading{
 
   height: 100px;
+}
+.score {
+
+  margin-top: 40px;
+}
+.footer {
+
+  color: #24b1c7;
+  margin-top: 6%;
+  margin-right: auto;
+  margin-left: auto;
+  
+  
 }

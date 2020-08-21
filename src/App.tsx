@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Qcard from '../src/Component/Qcard';
 import {Fetch} from '../src/Component/Api';
 import {QuestionState, Difficulty} from '../src/Component/Api';
+import { Footer } from './Component/Footer';
 
 
 export type AnswersObj = {
@@ -91,7 +92,7 @@ function App() {
         {gameOver || userAnswers.length === TOTAL_QUESTION ?
         (<button type="button" onClick={startQuiz} className="btn btn-warning start-btn">Start Quiz</button>): null}
         
-        {!gameOver ? <p className="score">Your Score = {score}</p> : null }
+        {!gameOver ? <p className="score ">Your Score = {score}</p> : null }
 
         {loading &&  <p><img className="loading" src="./loading.gif" alt="loading..." /> </p> }
         
@@ -114,6 +115,9 @@ function App() {
           <button type="button" onClick={nextQuestion} className="btn btn-warning start-btn">Next Question</button>
 
         ): null}
+        <div className="footer text-center">
+        <Footer />
+        </div>
     </div>
   );
 }

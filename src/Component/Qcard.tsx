@@ -21,7 +21,7 @@ const Qcard: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <div className="card-div col-lg-4 col-md-4 col-10 mx-auto mt-5">
+      <div className="container card-div col-lg-4 col-md-4 col-10 mx-auto mt-5">
         <p className="my-3">
           Questions: {questionNum} / {totalQuestions}
         </p>
