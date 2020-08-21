@@ -1,11 +1,3 @@
-import React from 'react'
 
-function Logic() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
 
-export default Logic;
+export const Shuffle = (array: any[]) => [...array].sort(()=> Math.random() - 0.5);

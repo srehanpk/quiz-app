@@ -1,7 +1,6 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-
 type Props = {
   question: string;
   answers: string[];
@@ -19,15 +18,13 @@ const Qcard: React.FC<Props> = ({
   totalQuestions,
   callback,
 }) => {
-
-
   return (
     <>
       <div className="card-div col-lg-4 col-md-4 col-10 mx-auto mt-5">
         <p className="my-3">
           Questions: {questionNum} / {totalQuestions}
         </p>
-        <p dangerouslySetInnerHTML={{ __html: question }}> Question Here</p>
+        <p dangerouslySetInnerHTML={{ __html: question }}></p>
 
         <div>
           {answers.map((answer) => (

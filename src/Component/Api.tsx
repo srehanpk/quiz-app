@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {Shuffle} from '../Component/Logic';
 
 export type Question = {
 
 category:          string;
 correct_answer:    string;
 difficulty:        string;
-incorrect_answers: string[]
+incorrect_answers: string[];
 question:          string;
+answers:           string[];
 type:              string;
 }
 
-export type questionState = Question & {answers: string[]}
+export type QuestionState = Question & {answers: string[]};
 
 export enum Difficulty {
 
@@ -22,28 +24,24 @@ export enum Difficulty {
 
 export const Fetch = async (amount: number, difficulty: Difficulty ) => {
 
- 
+
     
-  useEffect(() => {
+  
     const url = `https://opentdb.com/api.php?amount=${amount}&category=9&difficulty=${difficulty}&type=multiple`;
    
-    async function FetchApi() {
+    
       
       const res: any = await axios.get(url);
       const data = await res.data.results;
      
 
-      console.log(data);
-      
-      
-     
-      
+  return (data.map((question: Question) => (
+    {
+      ...question,
+      answers: Shuffle([...question.incorrect_answers, question.correct_answer]),
     }
+  ))
+  );
+
     
-    
-    FetchApi();
-    
-  }, []);
-    
-  return {};
 }
