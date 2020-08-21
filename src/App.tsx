@@ -82,7 +82,7 @@ function App() {
 
   }
 
- console.log(questions);
+ 
 
   return (
     <div className="App">
