@@ -22,10 +22,10 @@ const Qcard: React.FC<Props> = ({
   return (
     <>
       <div className="container card-div col-lg-4 col-md-4 col-10 mx-auto mt-5">
-        <p className="my-3">
+        <p className="my-3 font-weight-bolder ">
           Questions: {questionNum} / {totalQuestions}
         </p>
-        <p dangerouslySetInnerHTML={{ __html: question }}></p>
+        <p className=" font-weight-bolder " dangerouslySetInnerHTML={{ __html: question }}></p>
 
         <div>
           {answers.map((answer) => (
@@ -35,7 +35,7 @@ const Qcard: React.FC<Props> = ({
               type="button"
               value={answer}
               onClick={callback}
-              className="btn btn-info btn-lg btn-block  "
+              className="btn btn-info btn-lg btn-block font-weight-bolder text-truncate "
             >
               <span dangerouslySetInnerHTML={{ __html: answer }} />{" "}
             </button>
