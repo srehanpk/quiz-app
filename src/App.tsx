@@ -6,7 +6,7 @@ import {Fetch} from '../src/Component/Api';
 import {QuestionState, Difficulty} from '../src/Component/Api';
 
 
-type AnswersObj = {
+export type AnswersObj = {
 
   question: string;
   answer: string;
@@ -86,11 +86,12 @@ function App() {
   return (
     <div className="App">
       <h1 className="header">Quiz App</h1>
+      
       <div>
         {gameOver || userAnswers.length === TOTAL_QUESTION ?
         (<button type="button" onClick={startQuiz} className="btn btn-warning start-btn">Start Quiz</button>): null}
         
-        {!gameOver ? <p className="score">Your Score</p> : null }
+        {!gameOver ? <p className="score">Your Score = {score}</p> : null }
 
         {loading &&  <p><img className="loading" src="./loading.gif" alt="loading..." /> </p> }
         

@@ -1,13 +1,14 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import {AnswersObj} from '../App';
 
 type Props = {
   question: string;
   answers: string[];
-  userAnswer: any;
+  userAnswer: AnswersObj | undefined;
   questionNum: number;
   totalQuestions: number;
-  callback: any;
+  callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Qcard: React.FC<Props> = ({
@@ -30,7 +31,7 @@ const Qcard: React.FC<Props> = ({
           {answers.map((answer) => (
             <button
               key={answer}
-              disabled={userAnswer}
+              disabled={userAnswer? true : false}
               type="button"
               value={answer}
               onClick={callback}
