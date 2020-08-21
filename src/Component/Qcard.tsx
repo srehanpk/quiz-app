@@ -29,8 +29,10 @@ const Qcard: React.FC<Props> = ({
         <div>
           {answers.map((answer) => (
             <button
+              key={answer}
               disabled={userAnswer}
               type="button"
+              value={answer}
               onClick={callback}
               className="btn btn-info btn-lg btn-block  "
             >
