@@ -1,6 +1,6 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import {AnswersObj} from '../App';
+import { AnswersObj } from "../App";
 
 type Props = {
   question: string;
@@ -25,13 +25,16 @@ const Qcard: React.FC<Props> = ({
         <p className="my-3 font-weight-bolder ">
           Questions: {questionNum} / {totalQuestions}
         </p>
-        <p className=" font-weight-bolder " dangerouslySetInnerHTML={{ __html: question }}></p>
+        <p
+          className=" font-weight-bolder "
+          dangerouslySetInnerHTML={{ __html: question }}
+        ></p>
 
         <div>
           {answers.map((answer) => (
             <button
               key={answer}
-              disabled={userAnswer? true : false}
+              disabled={userAnswer ? true : false}
               type="button"
               value={answer}
               onClick={callback}
