@@ -78,7 +78,7 @@ function App() {
           </button>
         ) : null}
 
-        {!gameOver ? <p className="score ">Your Score = {score}</p> : null}
+        {!gameOver ? <p className="score font-weight-bolder">Your Score = {score}</p> : null}
 
         {loading && (
           <p>
