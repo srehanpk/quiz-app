@@ -1,5 +1,5 @@
 .back{
-  background-color: #0e383b;
+  background-color: #0e293b;
   height: 110vh ;
   
 }
@@ -14,6 +14,7 @@
 }
 .header{
   color: #54e5fc;
+  font-size: 50px;
   border-radius: 10px;
   box-shadow: gray 0px 3px 0px 1px;
   width: max-content;

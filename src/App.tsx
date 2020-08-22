@@ -94,7 +94,7 @@ function App() {
         
         {!gameOver ? <p className="score ">Your Score = {score}</p> : null }
 
-        {loading &&  <p><img className="loading" src="./loading.gif" alt="loading..." /> </p> }
+        {loading &&  <p><img className="loading" src="./loading.gif" alt="loading..." /> <br/>loading.....</p> }
         
         
       </div>
