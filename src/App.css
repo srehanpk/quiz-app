@@ -1,10 +1,14 @@
 .back {
   background-color: #0e293b;
+  background-image: url("./color-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 110vh;
 }
 .App {
   text-align: center;
-  color: #54e5fc;
+  color: white;
   padding-top: 30px;
 }
 .start-btn {
@@ -12,7 +16,8 @@
   box-shadow: gray 0px 0px 2px 2px;
 }
 .header {
-  color: #54e5fc;
+  color: white;
+  /* background-color: #14415f86; */
   font-size: 50px;
   border-radius: 10px;
   box-shadow: gray 0px 3px 0px 1px;
@@ -31,7 +36,7 @@
   margin-top: 40px;
 }
 .footer {
-  color: #54e5fc;
+  color: white;
   margin-top: 6%;
   margin-right: auto;
   margin-left: auto;
