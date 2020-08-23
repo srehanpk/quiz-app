@@ -25,6 +25,7 @@ export const Fetch = async (amount: number, difficulty: Difficulty) => {
   const res: any = await axios.get(url);
   const data = await res.data.results;
 
+
   return data.map((question: Question) => ({
     ...question,
     answers: Shuffle([...question.incorrect_answers, question.correct_answer]),
